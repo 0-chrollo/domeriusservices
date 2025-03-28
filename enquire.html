@@ -240,144 +240,138 @@
 
 
 <style>
-  .containerd {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7vh; /* No space between columns */
-  }
-  .column-1 {
-    flex: 1; /* 60% */
-    min-width: 50px;
-    box-sizing: border-box;
- 
-   
-  }
-
-  .column-2 {
-
-box-sizing: border-box;
-padding: auto;
-
-background-size: cover;
-background-position: center;
-position: relative;
-}
-
-.contents {
-position: absolute;
-top: 50%;
-left: 50%;
-
-z-index: 2;
-text-align: center;
-
-font-size: 24px;
-font-weight: bold;
-}
-.contents i {
-font-size: 40px; /* Icon size */
-margin-bottom: 10px;
-}
-
-  @media (max-width: 768px) {
     .containerd {
-      gap: 15px; /* Add space between columns on smaller screens */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7vh; /* No space between columns */
     }
-    .column-1, .column-2 {
-      flex: 1 1 100%; /* Full width on small screens */
+    .column-1 {
+      flex: 1; /* 60% */
+      min-width: 50px;
+      box-sizing: border-box;
     }
-  }
-</style>
-
-<div class="containerd">
-  <div class="form-container">
-      <h2><i class="fas fa-tree" style="color: #2e7d32;"></i> Service Request Form</h2>
-      <form id="treeServiceForm">
-          <div class="form-group name-group">
-              <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
-              <input type="text" id="surname" name="surname" placeholder="Surname" required>
-          </div>
-
-          <div class="form-group">
-              <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
-          </div>
-
-          <div class="form-group">
-              <input type="email" id="email" name="email" placeholder="Email Address (Optional)">
-          </div>
-
-
-
-          <div class="form-group">
-              <select id="serviceType" name="serviceType" required>
-                  <option value="">Select a Service</option>
-                  <option value="treeFelling">Tree Felling & Removal</option>
-                  <option value="treePruning">Tree Pruning & Maintenance</option>
-                  <option value="stumpRemoval">Stump Grinding & Removal</option>
-                  <option value="CabinConstruction">Cabin Construction</option>
-                  <option value="HedgeTrimming">Hedge Trimming</option>
-                  <option value="TreeTrimming">Tree Trimming</option>
-              </select>
-          </div>
-
-          <div class="form-group">
-              <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Service Location (Address)" required>
-          </div>
-
-          <div class="form-group">
-              <textarea id="additionalInstructions" name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
-          </div>
-
-          <button type="submit" class="btn-submit">
-              <i class="fas fa-paper-plane"></i> Submit Request
-          </button>
-      </form>
+  
+    .column-2 {
+      box-sizing: border-box;
+      padding: auto;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+  
+    .contents {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  
+    .contents i {
+      font-size: 40px; /* Icon size */
+      margin-bottom: 10px;
+    }
+  
+    @media (max-width: 768px) {
+      .containerd {
+        gap: 15px; /* Add space between columns on smaller screens */
+      }
+      .column-1, .column-2 {
+        flex: 1 1 100%; /* Full width on small screens */
+      }
+    }
+  </style>
+  
+  <div class="containerd">
+    <div class="form-container">
+        <h2><i class="fas fa-building" style="color: #2e7d32;"></i> Service Request Form</h2>
+        <form id="constructionServiceForm">
+            <div class="form-group name-group">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <input type="text" id="surname" name="surname" placeholder="Surname" required>
+            </div>
+  
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+            </div>
+  
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email Address (Optional)">
+            </div>
+  
+            <div class="form-group">
+                <select id="serviceType" name="serviceType" required>
+                    <option value="">Select a Service</option>
+                    <option value="houseConstruction">House Construction</option>
+                    <option value="projectManagement">Project Management</option>
+                    <option value="architecturalServices">Architectural Services</option>
+                    <option value="materialManagement">Material Management</option>
+                    <option value="labourManagement">Labour Management</option>
+                    <option value="housingRefurbishment">Housing Refurbishment</option>
+                </select>
+            </div>
+  
+            <div class="form-group">
+                <input type="text" id="serviceLocation" name="serviceLocation" placeholder="Service Location (Address)" required>
+            </div>
+  
+            <div class="form-group">
+                <label for="buildingSize">Select Building Size:</label>
+                <select id="buildingSize" name="buildingSize" required>
+                    <option value="">Choose Size</option>
+                    <option value="small">Small (1-2 bedrooms)</option>
+                    <option value="medium">Medium (3-4 bedrooms)</option>
+                    <option value="large">Large (5+ bedrooms)</option>
+                </select>
+            </div>
+  
+            <div class="form-group">
+                <textarea id="additionalInstructions" name="additionalInstructions" rows="3" placeholder="Additional Instructions (Optional)"></textarea>
+            </div>
+  
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Submit Request
+            </button>
+        </form>
+    </div>
+  
+    <div class="column-2">
+        <!-- How to Apply Section -->
+        <div class="how-to-apply">
+            <h2>How to Request a Service</h2>
+  
+            <div class="step">
+                <div class="step-icon">1</div>
+                <div class="step-text">Select the service you require (construction, project management, etc.).</div>
+            </div>
+  
+            <div class="step">
+                <div class="step-icon">2</div>
+                <div class="step-text">Provide your contact details and service location.</div>
+            </div>
+  
+            <div class="step">
+                <div class="step-icon">3</div>
+                <div class="step-text">Choose the building size and any additional instructions.</div>
+            </div>
+  
+            <div class="step">
+                <div class="step-icon">4</div>
+                <div class="step-text">Submit your request, and our team will contact you for further details.</div>
+            </div>
+        </div>
+    </div>
   </div>
-
-
-
-
-
-  <div class="column-2">
-      <!-- How to Apply Section -->
-      <div class="how-to-apply">
-          <h2>How to Request a Service</h2>
-
-          <div class="step">
-              <div class="step-icon">1</div>
-              <div class="step-text">Select the tree care or construction service you need.</div>
-          </div>
-
-          <div class="step">
-              <div class="step-icon">2</div>
-              <div class="step-text">Provide your contact details and service location.</div>
-          </div>
-
-          <div class="step">
-              <div class="step-icon">3</div>
-              <div class="step-text">Include any specific details or instructions (optional).</div>
-          </div>
-
-          <div class="step">
-              <div class="step-icon">4</div>
-              <div class="step-text">Submit your request, and our team will contact you for confirmation.</div>
-          </div>
-      </div>
-  </div>
-</div>
-
-</main>
-
+  
   <script>
-      document.getElementById("logisticsForm").addEventListener("submit", function(event) {
+      document.getElementById("constructionServiceForm").addEventListener("submit", function(event) {
           event.preventDefault();
-          alert("Your logistics service request has been submitted successfully!");
+          alert("Your construction service request has been submitted successfully!");
       });
   </script>
-
-
-
-
+  
 
 
 
