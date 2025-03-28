@@ -1297,7 +1297,7 @@
   }
   
   .top-title {
-    background: linear-gradient(95deg, rgb(192, 110, 11), #0e94c5);
+    background: linear-gradient(95deg, rgb(210, 124, 19), rgb(166, 95, 7));
         
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1316,7 +1316,7 @@
       line-height: 1.3;
       margin-bottom: 25px;
       font-weight: 600;
-      background: linear-gradient(35deg, rgb(192, 110, 11), #069fd6);
+      background: linear-gradient(35deg, rgb(166, 95, 7),  #da8608);
         
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -1752,7 +1752,78 @@
 
 
 
+<style>
+  .audio-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
+  .audio-widget i {
+      font-size: 24px;
+  }
+</style>
+
+<!-- Fixed Audio Widget -->
+<div class="audio-widget" id="audioWidget" onclick="toggleAudio()">
+<i id="audioIcon" class="fas fa-play"></i> <!-- Font Awesome play icon initially -->
+</div>
+
+<!-- Audio Element -->
+<audio id="audioPlayer" autoplay loop>
+<source src="ZDomeriusServices.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
+<script>
+// Function to toggle play and pause
+function toggleAudio() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const audioIcon = document.getElementById("audioIcon");
+
+  if (audioPlayer.paused) {
+      audioPlayer.play();  // Play the audio
+      audioIcon.classList.remove("fa-play");  // Remove the play icon
+      audioIcon.classList.add("fa-pause");   // Add the pause icon
+  } else {
+      audioPlayer.pause();  // Pause the audio
+      audioIcon.classList.remove("fa-pause");  // Remove the pause icon
+      audioIcon.classList.add("fa-play");      // Add the play icon
+  }
+}
+
+// On page load, ensure audio continues playing if it was playing before navigating
+window.onload = function() {
+  const audioPlayer = document.getElementById("audioPlayer");
+  const audioIcon = document.getElementById("audioIcon");
+
+  // Check if the audio state is saved as playing
+  if (localStorage.getItem('audioPlaying') === 'true') {
+      audioPlayer.play();
+      audioIcon.classList.remove("fa-play");
+      audioIcon.classList.add("fa-pause");
+  }
+
+  // Listen for the play event to save the audio state
+  audioPlayer.addEventListener('play', function() {
+      localStorage.setItem('audioPlaying', 'true');
+  });
+
+  // Listen for the pause event to save the audio state
+  audioPlayer.addEventListener('pause', function() {
+      localStorage.setItem('audioPlaying', 'false');
+  });
+};
+</script>
 
 
 
@@ -1860,20 +1931,7 @@
 
   
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-  
-  *{
-  
-  margin: 0;
-  
-  padding: 0;
-  
-  box-sizing: border-box;
-  
-  font-family: "Poppins" , sans-serif;
-  
-  }
-  
+
 
   
   footer{
@@ -1890,23 +1948,7 @@
   
   }
   
-  footer::before{
-  
-  content: '';
-  
-  position: absolute;
-  
-  left: 0;
-  
-  top: 60px;
-  
-  height: 1px;
-  
-  width: 100%;
-  
-  background: #AFAFB6;
-  
-  }
+
   
   footer .content{
   
@@ -2068,23 +2110,7 @@
   
   }
   
-  .link-boxes .box .link_name::before{
-  
-  content: '';
-  
-  position: absolute;
-  
-  left: 0;
-  
-  bottom: -2px;
-  
-  height: 2px;
-  
-  width: 35px;
-  
-  background: #fff;
-  
-  }
+
   
   .content .link-boxes .box li{
   
@@ -2256,11 +2282,7 @@
   
   @media (max-width: 700px){
   
-  footer{
-  
-  position: relative;
-  
-  }
+
   
   .content .top .logo-details{
   
@@ -2339,3 +2361,18 @@
   </style>
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
