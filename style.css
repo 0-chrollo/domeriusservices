@@ -317,12 +317,12 @@ background-color:  rgb(243, 213, 213);
         margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        background: linear-gradient(60deg, #b56e03,#ff9900);
+        background: linear-gradient(60deg, #db8b12, #b56e03);
         -webkit-background-clip: text;
   
   
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 15px  #066284;
+        text-shadow: 0 0 15px  #f09e23
       }
   
       .slide-subtitle {
@@ -349,8 +349,8 @@ background-color:  rgb(243, 213, 213);
       }
   
       .slide-button:hover {
-        background: #0c5f7d;
-        border-color:  #0d90c0;
+        background:  #ebc388;
+        border-color:  #b56e03;
         transform: translateY(-3px);
         box-shadow: 0 5px 20px rgba(0, 238, 255, 0.4);
       }
