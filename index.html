@@ -279,7 +279,7 @@
         align-items: center;
        
         margin: 0;
-        background-color: #f8f8f8;
+       
         text-align: center;
         padding: 20px;
     }
@@ -356,7 +356,7 @@
 
 <section class="content-section">
   <div class="text-container">
-      <h5 class="section-title">ABOUT  <span class="elite" style="font-size: 30px;"> ELITE</span> <span class="kitchen-designs" style="font-size: 20px;">KITCHEN DESIGNS</span></h5>
+    
       <h2 class="main-heading">Where Modern Aesthetics Meets Timeless Elegance</h2>
       <p class="description">
           At <span class="highlight">Elite Kitchen Designs</span>, we specialize in transforming your living spaces with luxurious, modern aesthetic designs. As a national company, we have branches in Gauteng, Cape Town, Eastern Cape, Durban & Northern Cape, our team of expert designers and craftsmen focus on creating not only stunning kitchen layouts but also comprehensive home interiors that elevate the entire ambiance of your residence. Whether you're redesigning your kitchen, living room, or any other part of your home, <span class="highlight2">Elite Kitchen Designs</span> guarantees a seamless, sophisticated transformation that reflects your unique taste and lifestyle...
@@ -434,21 +434,21 @@
     
     /* Image box */
     .kg-image-box {
-        height: 350px;
+        height: 300px;
         box-sizing: border-box;
         overflow: hidden;
     }
     
     .kg-image-box img {
         width: 100%;
-        height: 55vh;
+        height: 50vh;
        
         
     }
     
     /* Typography */
     .kg-heading {
-        background: linear-gradient(35deg, rgba(178, 98, 0, 0.747), #038ec0);
+        background: linear-gradient(45deg, rgba(178, 98, 0, 0.747), #935901);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 28px;
@@ -461,7 +461,7 @@
     .kg-divider {
         width: 70px;
         height: 3px;
-        background-color:#066284;
+        background-color:#b56e03;
         margin-bottom: 20px;
         border: none;
     }
@@ -480,10 +480,10 @@
   
   
   .kg-view-details:hover {
-    background: #0c5f7d;
-    border-color:  #0d90c0;
+    background: #b56e03;
+    border-color:  #b56e03;
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0, 238, 255, 0.4);
+    box-shadow: 0 8px 30px #995c02;
   }
   
   .kg-view-details::before {
@@ -507,9 +507,9 @@
     .kg-view-details {
         display: inline-block;
         padding: 8px 20px;
-        border: 1px solid #066284;
+        border: 1px solid #b56e03;
         background-color: transparent;
-        color: #666;
+        color: #915904;
         text-decoration: none;
         font-family: sans-serif;
         font-size: 12px;
@@ -546,8 +546,8 @@
         }
         
         .kg-image-box {
-            height: auto;
-            min-height: 400px;
+            height: 100%;
+           
         }
     }
   </style>
@@ -576,7 +576,7 @@
   .marquee-container {
     width: 100%;
     overflow: hidden;
-    background:linear-gradient(95deg, #3d8098, #044a64);
+    background:linear-gradient(95deg, #e7ad58, #b56e03);
               
              
     padding: 10px 0;
@@ -844,16 +844,11 @@
 
 
 <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
 
-    body {
+    .checker {
       overflow-x: hidden;
-      height: 100vh;
+      overflow-x: unset;
+      height: 90vh;
     }
 
     .slider-container {
@@ -883,7 +878,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/1458F/production/_101934338_hi004089221.jpg.webp');
+     
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -896,7 +891,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(158, 43, 53, 0.85); /* #9E2B35 with opacity */
+      background-color:#b56e03;
       z-index: -1;
     }
 
@@ -1058,7 +1053,7 @@
       }
     }
   </style>
-
+<div class="checker">
   <div class="slider-container">
     <div class="slider-column">
       <div class="slider-column-background"></div>
@@ -1066,13 +1061,18 @@
       
       <div class="slide active">
         <div class="card-icon">💳</div>
-        <h2 class="slide-title">SMARTER FINANCIAL SOLUTIONS</h2>
+        <h2 class="slide-title">FINANCIAL</h2>
         <p class="slide-description">Whether it's credit cards, loans, or savings plans, we provide modern solutions tailored to your needs.</p>
       </div>
       <div class="slide">
         <div class="card-icon">💰</div>
-        <h2 class="slide-title">FLEXIBLE LOAN OPTIONS</h2>
+        <h2 class="slide-title">OPTIONS</h2>
         <p class="slide-description">Personalized loans with competitive rates to help you achieve your financial goals.</p>
+      </div>
+      <div class="slide">
+        <div class="card-icon">📊</div>
+        <h2 class="slide-title">INVESTMENT STRATEGIES</h2>
+        <p class="slide-description">Expert advice on building wealth through strategic investment planning.</p>
       </div>
       <div class="slide">
         <div class="card-icon">📊</div>
@@ -1089,6 +1089,7 @@
         <div class="slider-dot active" data-index="0"></div>
         <div class="slider-dot" data-index="1"></div>
         <div class="slider-dot" data-index="2"></div>
+        <div class="slider-dot" data-index="3"></div>
       </div>
     </div>
 
@@ -1102,7 +1103,7 @@
       </div>
     </div>
   </div>
-
+</div>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const slides = document.querySelectorAll('.slide');
@@ -1501,7 +1502,7 @@
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
-                url('interior/float.webp');
+                url('architecture4.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
