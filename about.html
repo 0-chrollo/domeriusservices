@@ -220,7 +220,59 @@
         }
     </style>
 
- 
+<div class="lining">
+    <div class="marquee-container">
+        <div class="marquee">
+            Residential Architecture • Commercial Architecture • Interior Architecture • Sustainable Architecture • Historic Preservation • Green Architecture
+        </div>
+    </div>
+  </div>
+  </br>
+  
+  
+  <style>
+  .lining {
+    margin: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background:linear-gradient(95deg, #e7ad58, #b56e03);
+              
+             
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .marquee {
+    display: inline-block;
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: scroll-left 10s linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    from {
+        transform: translateX(80%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+  }
+  
+  
+  </style>
+  
 
     <section class="hero">
         <div class="hero-content">
@@ -477,8 +529,7 @@
     <div class="top">
     
     <div class="logo-details">
-    
-    <i class="fab fa-slack"></i>
+
     
     <span class="logo_name">Domerius Services</span>
     
@@ -511,7 +562,7 @@
     
     <li><a href="designs.html">Designs</a></li>
     
-    <li><a href="#">Get started</a></li>
+    <li><a href="about.html">Info</a></li>
     
     </ul>
     
@@ -528,44 +579,7 @@
     <li><a href="#">Banner design</a></li>
     
     </ul>
-    
-    <ul class="box">
-    
-    <li class="link_name">Account</li>
-    
-    <li><a href="#">Profile</a></li>
-    
-    <li><a href="#">My account</a></li>
-    
-    <li><a href="#">Prefrences</a></li>
-    
-    <li><a href="#">Purchase</a></li>
-    
-    </ul>
-    
-    <ul class="box">
-    
-    <li class="link_name">Courses</li>
-    
-    <li><a href="#">HTML & CSS</a></li>
-    
-    <li><a href="#">JavaScript</a></li>
-    
-    <li><a href="#">Photography</a></li>
-    
-    <li><a href="#">Photoshop</a></li>
-    
-    </ul>
-    
-    <ul class="box input-box">
-    
-    <li class="link_name">Subscribe</li>
-    
-    <li><input type="text" placeholder="Enter your email"></li>
-    
-    <li><input type="button" value="Subscribe"></li>
-    
-    </ul>
+
     
     </div>
     
@@ -592,17 +606,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
     
-    *{
-    
-    margin: 0;
-    
-    padding: 0;
-    
-    box-sizing: border-box;
-    
-    font-family: "Poppins" , sans-serif;
-    
-    }
+
     
   
     
@@ -610,7 +614,7 @@
     
    
     
-    background: #140B5C;
+    background:#bd7509;
     
     width: 100%;
     
@@ -634,7 +638,6 @@
     
     width: 100%;
     
-    background: #AFAFB6;
     
     }
     
@@ -918,7 +921,7 @@
     
     width: 100%;
     
-    background: #0F0844;
+    background:#ad6a07;
     
     }
     
@@ -986,11 +989,7 @@
     
     @media (max-width: 700px){
     
-    footer{
-    
-    position: relative;
-    
-    }
+
     
     .content .top .logo-details{
     
@@ -1071,13 +1070,10 @@
 
 
 
-
-
-
 <style>
     body {
         font-family: Arial, sans-serif;
-        padding-bottom: 60px; /* To prevent overlap with the fixed widget */
+        padding-bottom: 40px; /* To prevent overlap with the fixed widget */
     }
     .pdf-widget {
         position: fixed;
@@ -1117,7 +1113,4 @@
 
 
 
-
-
-  </body>
 </html>
