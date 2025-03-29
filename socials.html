@@ -66,7 +66,7 @@
              
               <h1 class="slide-title">Elite Kitchen Mastery</h1>
            <p class="slide-subtitle">Crafting premium kitchen spaces with sleek installations, modern aesthetics, and flawless functionality.</p>
-            
+           <button class="slide-button"><i class="fas fa-home" style="color:  #deeaf2;"></i> <a href="index.html" style="text-decoration: none; color: rgb(240, 226, 226);">Home Page</a></button>
             </div>
           </div>
           
@@ -140,7 +140,446 @@
 
 
 
-  <footer>
+  
+  
+  
+  <style>
+    :root {
+        --primary-color: #4267B2;
+        --secondary-color: #E1306C;
+        --accent-color: #f8f9fa;
+        --text-color: #333;
+        --card-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: #f5f7fa;
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+    
+    header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 3rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tagline {
+        font-weight: 300;
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+    
+    .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .card {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--card-shadow);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    
+    .card-header {
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .facebook-card .card-header {
+        background-color: rgba(66, 103, 178, 0.1);
+    }
+    
+    .instagram-card .card-header {
+        background-color: rgba(225, 48, 108, 0.1);
+    }
+    
+    .other-socials-card .card-header {
+        background: linear-gradient(to right, rgba(66, 103, 178, 0.1), rgba(225, 48, 108, 0.1));
+    }
+    
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+    }
+    
+    .facebook-icon {
+        background-color: #4267B2;
+    }
+    
+    .instagram-icon {
+        background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    
+    .card-subtitle {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.25rem;
+    }
+    
+    .card-content {
+        padding: 1.5rem;
+        min-height: 400px;
+    }
+    
+    /* Facebook embed specific styles */
+    .facebook-embed-container {
+        width: 100%;
+        min-height: 300px;
+        overflow: visible;
+    }
+    
+    .facebook-embed-container .fb-post {
+        min-width: 100% !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    /* Manual Facebook post styling */
+    .manual-fb-post {
+        border: 1px solid #dddfe2;
+        border-radius: 8px;
+        padding: 12px;
+        background-color: #fff;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .manual-fb-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .manual-fb-logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    
+    .manual-fb-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .manual-fb-info {
+        flex: 1;
+    }
+    
+    .manual-fb-name {
+        font-weight: 600;
+        color: #385898;
+        font-size: 14px;
+    }
+    
+    .manual-fb-time {
+        color: #606770;
+        font-size: 12px;
+    }
+    
+    .manual-fb-content {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    
+    .manual-fb-actions {
+        display: flex;
+        border-top: 1px solid #dadde1;
+        padding-top: 12px;
+        color: #606770;
+        font-size: 13px;
+    }
+    
+    .manual-fb-action {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .manual-fb-action i {
+        margin-right: 4px;
+    }
+    
+    .social-icons-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .social-icon-item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: var(--accent-color);
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+    }
+    
+    .social-icon-item:hover {
+        transform: scale(1.05);
+    }
+    
+    .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.25rem;
+    }
+    
+    .twitter-icon {
+        background-color: #1DA1F2;
+    }
+    
+    .linkedin-icon {
+        background-color: #0077B5;
+    }
+    
+    .youtube-icon {
+        background-color: #FF0000;
+    }
+    
+    .pinterest-icon {
+        background-color: #E60023;
+    }
+    
+    .social-icon-text {
+        font-weight: 500;
+    }
+    
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 2rem;
+    }
+    
+    .copyright {
+        opacity: 0.8;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .social-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .social-icons-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        header {
+            padding: 1.5rem 0;
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<header>
+    <div class="container">
+        <h1>Connect With Domerius Services</h1>
+        <p class="tagline">Follow our social media for the latest updates, projects, and inspiration</p>
+    </div>
+</header>
+
+<main class="container">
+    <div class="social-grid">
+        <div class="card facebook-card">
+            <div class="card-header">
+                <div class="icon-circle facebook-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div>
+                    <h2 class="card-title">Our Facebook Page</h2>
+                    <p class="card-subtitle">Follow us for daily updates and project showcases</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <!-- Manual Facebook Post (more reliable than embed) -->
+                <div class="manual-fb-post">
+                    <div class="manual-fb-header">
+                        <div class="manual-fb-logo">
+                            <img src="/api/placeholder/40/40" alt="Domerius services logo">
+                        </div>
+                        <div class="manual-fb-info">
+                            <div class="manual-fb-name">Domerius services</div>
+                            <div class="manual-fb-time">about 6 months ago</div>
+                        </div>
+                    </div>
+                    <div class="manual-fb-content">
+                        <p>Domerius Services was founded in 2016 to provide top-notch architectural, construction, and project management services. Our focus is to bring your dreams and visions to life with expertise in construction monitoring, plan designs, and masterful project management.</p>
+                    </div>
+                    <div class="manual-fb-actions">
+                        <div class="manual-fb-action">
+                            <i class="far fa-thumbs-up"></i> 1
+                        </div>
+                        <div class="manual-fb-action">
+                            <i class="far fa-comment"></i> Comment
+                        </div>
+                        <div class="manual-fb-action">
+                            <i class="fas fa-share"></i> Share
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Original Facebook Embed (hidden by default, uncomment if needed) -->
+                <div style="display: none;">
+                    <div id="fb-root"></div>
+                    <script async="1" defer="1" crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
+                    <div class="fb-post" data-href="https://www.facebook.com/61566402162888/posts/pfbid02JqRiipmH5LBCvBxVVsMRML93Ew2ehDrqoaKfzczdghs1B8JWJtif1YpospvgKzJul" data-width="100%" data-show-text="true">
+                        <blockquote cite="https://graph.facebook.com/61566402162888/posts/122105621690546738/" class="fb-xfbml-parse-ignore">
+                            <p>Domerius Services was founded in 2016 to provide top-notch architectural, construction, and project management services....</p>
+                            Posted by <a href="https://www.facebook.com/people/Domerius-services/61566402162888/">Domerius services</a> on <a href="https://graph.facebook.com/61566402162888/posts/122105621690546738/">Wednesday, October 2, 2024</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card instagram-card">
+            <div class="card-header">
+                <div class="icon-circle instagram-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div>
+                    <h2 class="card-title">Our Instagram Feed</h2>
+                    <p class="card-subtitle">Get inspired with our visual project portfolio</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
+                <script src="https://static.elfsight.com/platform/platform.js" async></script>
+                <div class="elfsight-app-2cd86628-0541-4b82-ac0a-5ef4d78c973b" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+        
+        <div class="card other-socials-card">
+            <div class="card-header">
+                <div class="icon-circle" style="background: linear-gradient(45deg, #1DA1F2, #0077B5);">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div>
+                    <h2 class="card-title">More Ways to Connect</h2>
+                    <p class="card-subtitle">Follow us across all our platforms</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="social-icons-grid">
+                    <a href="#" class="social-icon-item">
+                        <div class="social-icon twitter-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <span class="social-icon-text">Twitter</span>
+                    </a>
+                    <a href="#" class="social-icon-item">
+                        <div class="social-icon linkedin-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <span class="social-icon-text">LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-icon-item">
+                        <div class="social-icon youtube-icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <span class="social-icon-text">YouTube</span>
+                    </a>
+                    <a href="#" class="social-icon-item">
+                        <div class="social-icon pinterest-icon">
+                            <i class="fab fa-pinterest-p"></i>
+                        </div>
+                        <span class="social-icon-text">Pinterest</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer>
 
     <div class="content">
     
@@ -654,7 +1093,7 @@
     
     footer::before{
     
-        
+
     top: 145px;
     
     }
@@ -686,10 +1125,6 @@
     }
     
     </style>
-  
-  
-  
-  
   
   
   

@@ -66,7 +66,7 @@
              
               <h1 class="slide-title">Elite Kitchen Mastery</h1>
            <p class="slide-subtitle">Crafting premium kitchen spaces with sleek installations, modern aesthetics, and flawless functionality.</p>
-            
+           <button class="slide-button"><i class="fas fa-home" style="color:  #deeaf2;"></i> <a href="index.html" style="text-decoration: none; color: rgb(240, 226, 226);">Home Page</a></button>
             </div>
           </div>
           
@@ -134,17 +134,83 @@
 
 
 
+
+  <style>
+
+    .showcase-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+    }
+    .card-show {
+        border: solid 1px #b56e03;
+        background: white;
+        padding: 2px;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 350px;
+    }
+    .grid-containering {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .grid-containering img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .grid-containering img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="showcase-cards">
+<div class="card-show">
+    <div class="grid-containering">
+        <img src="images/floor2.webp" alt="Domerius Floor Plan 1">
+        <img src="images/floor4.webp" alt="Domerius Floor Plan 2">
+        <img src="images/floor5.webp" alt="Domerius Floor plan 3">
+        <img src="images/floor7.webp" alt="Domerius Floor Plan 4">
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <main class="tm-form">
-
-
-
-
 
   <style>
 
 
       .tm-form {
-          background-color: #f4f4f4;
+       
           display: flex;
           justify-content: center;
           align-items: center;
@@ -168,7 +234,7 @@
       .form-container h2 {
           text-align: center;
           margin-bottom: 20px;
-          color: #13659f;
+          color: #b56e03;
       }
 
       .form-group {
@@ -197,7 +263,7 @@
       }
 
       .btn-submit {
-          background-color: #105384;
+          background-color: #b56e03;
           color: white;
           font-size: 16px;
           padding: 12px;
@@ -213,7 +279,7 @@
       }
 
       .btn-submit:hover {
-          background-color: #0056b3;
+          background-color: #603b02;
       }
 
       @media (min-width: 480px) {
@@ -239,7 +305,7 @@
       .how-to-apply h2 {
           text-align: center;
           margin-bottom: 20px;
-          color: #105384;
+          color: #b56e03;
       }
 
       .step {
@@ -256,7 +322,7 @@
       .step-icon {
           width: 40px;
           height: 40px;
-          background: #105384;
+          background: #b56e03;
           color: white;
           display: flex;
           align-items: center;
@@ -338,7 +404,7 @@
   
   <div class="containerd">
     <div class="form-container">
-        <h2><i class="fas fa-building" style="color: #2e7d32;"></i> Service Request Form</h2>
+        <h2><i class="fas fa-building" style="color: #b56e03;"></i> Domerius Enquiry Form</h2>
         <form id="constructionServiceForm">
             <div class="form-group name-group">
                 <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
@@ -943,7 +1009,7 @@
     font-size: 12px;
     
     }
-    
+
     
     }
     
