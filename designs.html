@@ -715,58 +715,59 @@
 
 
 
-   <div class="lining">
-    <div class="marquee-container">
-        <div class="marquee">
-            Residential Architecture • Commercial Architecture • Interior Architecture • Sustainable Architecture • Historic Preservation • Green Architecture
-        </div>
-    </div>
+<div class="lining">
+  <div class="marquee-container">
+      <div class="marquee">
+          Residential Architecture • Commercial Architecture • Interior Architecture • Sustainable Architecture • Historic Preservation • Green Architecture
+      </div>
   </div>
-  </br>
+</div>
+
+
+
+<style>
+.lining {
+  margin: 0;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  
-  <style>
-  .lining {
-    margin: 0;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+}
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background:linear-gradient(95deg, #e7ad58, #b56e03);
+            
+           
+  padding: 10px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee {
+  display: inline-block;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: scroll-left 22s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+      transform: translateX(60%);
   }
-  
-  .marquee-container {
-    width: 100%;
-    overflow: hidden;
-    background:linear-gradient(95deg, #e7ad58, #b56e03);
-              
-             
-    padding: 10px 0;
-    white-space: nowrap;
-    position: relative;
+  to {
+      transform: translateX(-95%);
   }
-  
-  .marquee {
-    display: inline-block;
-    font-size: 18px;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: scroll-left 10s linear infinite;
-  }
-  
-  @keyframes scroll-left {
-    from {
-        transform: translateX(80%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-  }
-  
-  
-  </style>
+}
+
+
+</style>
+
   
   
 
