@@ -272,6 +272,253 @@
   
   
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+
+<style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    .dome-vid {
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+    }
+    .cont {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      background: white;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .text-section, .video-section {
+      flex: 1;
+      padding: 40px;
+    }
+    .text-section {
+      background: white;
+      color: #513102;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .text-section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #b56e03;
+    }
+    .text-section p {
+      font-size: 15px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .icon-list {
+      display: flex;
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .icon-list div {
+      background: #b56e03;
+      padding: 8px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+      color: white;
+    }
+    .video-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+    }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 380px;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:  #95651c60;
+      backdrop-filter: blur(10px);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .play-button {
+      width: 70px;
+      height: 70px;
+      background: #f19914;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+    .play-button::before {
+      content: "\25B6";
+      font-size: 30px;
+      color: white;
+    }
+    .play-button.pulse {
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% {
+          transform: scale(1);
+          opacity: 0.6;
+      }
+      100% {
+          transform: scale(1.2);
+          opacity: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .cont {
+          flex-direction: column;
+      }
+      .text-section, .video-section {
+          padding: 20px;
+      }
+    }
+    </style>
+    
+    <div class="dome-vid">
+    <div class="cont">
+        <div class="text-section">
+            <h2>Discover the Excellence of Domerius Services</h2>
+            <p>Step into the world of Domerius Services, where every project is crafted with precision, creativity, and innovation. Watch the Presentation video to see how we turn visionary ideas into tangible results, utilizing advanced technologies and exceptional craftsmanship.</p>
+            <p>Experience the transformation of spaces through our expertise in design and construction, whether it's for residential or commercial projects. Let us show you why Domerius Services is the trusted name for modern, high-quality and cost-effective architecture.</p>
+            <div class="icon-list">
+                <div>&#9733;</div>
+                <div>&#9881; </div>
+              
+            </div>
+        </div>
+      <div class="video-section">
+          <div class="video-wrapper">
+              <div class="video-overlay" id="video-overlay">
+                  <div class="play-button pulse" id="play-btn"></div>
+              </div>
+              <iframe id="promo-video" src="https://player.vimeo.com/video/1071969244?h=549209767c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="width:100%; height:200px; border-radius: 8px;" title="Domerius Services Video Presentation 1"></iframe>
+          </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <script>
+    document.getElementById('play-btn').addEventListener('click', function() {
+      let overlay = document.getElementById('video-overlay');
+      let iframe = document.getElementById('promo-video');
+      let player = new Vimeo.Player(iframe);
+      player.play();
+      overlay.style.display = 'none';
+    });
+    </script>
+
+
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+<!--VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section class="hero">
     <div class="hero-content">
         <h1>  
@@ -294,45 +541,45 @@
 </section>
 
 <section class="section">
-        <div class="grid-container">
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-home"></i></div>
-                <h3>Residential Architecture</h3>
-                <p>Innovative home designs that balance comfort, functionality, and modern aesthetics to create timeless living spaces.</p>
-            </div>
-        
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-building"></i></div>
-                <h3>Commercial Architecture</h3>
-                <p>Strategic planning and construction of business spaces, ensuring efficiency, sustainability, and future-ready designs.</p>
-            </div>
-        
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
-                <h3>Interior Architecture</h3>
-                <p>Customized interior solutions that enhance both residential and commercial spaces with style and practicality.</p>
-            </div>
-        
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-leaf"></i></div>
-                <h3>Sustainable Architecture</h3>
-                <p>Eco-conscious building techniques and energy-efficient materials that promote environmental responsibility.</p>
-            </div>
-        
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-landmark"></i></div>
-                <h3>Historic Architecture</h3>
-                <p>Expert restoration and conservation of heritage structures, ensuring durability while maintaining historical integrity.</p>
-            </div>
-        
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-seedling"></i></div>
-                <h3>Green Architecture</h3>
-                <p>Transforming communities through sustainable urban planning, infrastructure development, and social housing projects.</p>
-            </div>
+    <div class="grid-container">
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-home"></i></div>
+            <h3>Residential Architecture</h3>
+            <p>We design and build energy-efficient, modern homes using alternative building technologies. Our approach ensures structural durability, faster construction times, and long-term cost savings, creating timeless living spaces with unparalleled comfort.</p>
         </div>
-        
-    </section>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-building"></i></div>
+            <h3>Commercial Architecture</h3>
+            <p>From **office buildings to retail spaces, our commercial designs focus on aesthetic appeal, functionality, and sustainability. With our Ikhaya Future House System, we construct high-quality business spaces with reduced turnaround times and superior strength.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
+            <h3>Interior Architecture</h3>
+            <p>Our custom interior solutions blend modern design with practical layouts, ensuring every space is both visually appealing and highly functional. We incorporate smart design techniques for a seamless and luxurious experience.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-leaf"></i></div>
+            <h3>Sustainable Architecture</h3>
+            <p>We prioritize eco-conscious building techniques, utilizing energy-efficient materials and green construction methods. Our homes and commercial buildings reduce energy consumption while promoting environmental responsibility.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-landmark"></i></div>
+            <h3>Historic Preservation</h3>
+            <p>Preserving history through expert restoration and structural enhancements. We seamlessly blend heritage conservation with modern reinforcement techniques, ensuring long-lasting integrity without compromising historical value.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-seedling"></i></div>
+            <h3>Green Architecture</h3>
+            <p>Leading the way in sustainable urban development, we integrate alternative building technology to create affordable, energy-efficient housing and smart infrastructure that enhances communities and future-proofs cities.</p>
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -468,42 +715,42 @@
 
     <div class="sector">
         <h2>Company Overview</h2>
-        <p>Domerius Services is a leading architectural design and construction company that has been providing exceptional services since its establishment in 2016. Based in Gauteng, South Africa, Domerius Services specializes in high-quality residential and commercial architectural designs, sustainable construction, and project management.</p>
-        <p>With a dedicated team of professionals, the company is committed to delivering innovative and modern solutions tailored to clients' needs. Domerius Services ensures that every project meets the highest industry standards while maintaining a focus on affordability and sustainability.</p>
-    </div>
-
-    <div class="sector services">
-        <h2>Our Services</h2>
-        <p>We offer a comprehensive range of services in the architectural and construction industry, including:</p>
-        <ul>
-            <li>Residential Architecture – Custom home designs, renovations, and modern housing solutions.</li>
-            <li>Commercial Architecture – Office buildings, malls, and retail space planning.</li>
-            <li>Interior Architecture – Stylish and functional interior designs for homes and offices.</li>
-            <li>Sustainable Architecture – Eco-friendly and energy-efficient design solutions.</li>
-            <li>Historic Preservation – Restoration and conservation of heritage buildings.</li>
-            <li>Project Management – Full-scale management of construction projects from start to finish.</li>
-            <li>Social Housing Development – Affordable housing solutions for low- and middle-income families.</li>
-            <li>Construction Monitoring – Quality control and project supervision.</li>
-        </ul>
-    </div>
-
-    <div class="sector">
-        <h2>Commitment to Excellence</h2>
-        <p>Domerius Services prides itself on its ability to blend creativity with functionality, ensuring that every project reflects both modern aesthetics and practicality. The company is dedicated to:</p>
-        <ul>
-            <li>Providing innovative architectural designs tailored to individual client needs.</li>
-            <li>Ensuring sustainability by incorporating environmentally friendly building techniques.</li>
-            <li>Upholding industry best practices and compliance with construction regulations.</li>
-            <li>Partnering with reliable suppliers and contractors to maintain quality assurance.</li>
-        </ul>
-    </div>
-
-    <div class="sector">
-        <h2>Projects and Experience</h2>
-        <p>Since its establishment in 2016, Domerius Services has played a key role in South Africa’s construction and social housing sectors. The company specializes in architectural design, project management, housing construction, and urban development. With a strong focus on affordable housing, Domerius Services collaborates with municipalities, social housing authorities, and private stakeholders to deliver quality residential and commercial projects that align with national development goals.</p>
+        <p>Domerius Services is revolutionizing the construction industry through Alternative Building Methods (ABM) and Green Building Technology. Established in 2016 and based in Gauteng, South Africa, we specialize in high-quality residential and commercial designs, sustainable construction, and advanced project management. By integrating cutting-edge solutions such as polystyrene-based construction and structural plastering from Ikhaya Future House, we create energy-efficient buildings that are durable, cost-effective, and environmentally friendly.</p>
+        <p>Unlike traditional brick-and-mortar methods, our approach accelerates the construction process, cutting standard build times from 7 months to just 3-4 months while maintaining superior quality and compliance with industry standards.</p>
     </div>
     
-
+    <div class="sector services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of architectural and construction services designed for modern, sustainable living and business needs:</p>
+        <ul>
+            <li><strong>Residential Architecture:</strong> Bespoke home designs, renovations, and eco-friendly housing solutions.</li>
+            <li><strong>Commercial Architecture:</strong> Strategic planning and development of corporate offices, retail centers, and industrial spaces.</li>
+            <li><strong>Interior & Exterior Design:</strong> Functional and aesthetic solutions that optimize living and working spaces.</li>
+            <li><strong>Sustainable Architecture:</strong> Energy-efficient building designs that minimize environmental impact.</li>
+            <li><strong>Historic Preservation:</strong> Restoration and reinforcement of heritage structures with modern materials.</li>
+            <li><strong>Alternative Building Methods:</strong> Use of polystyrene-based walls and reinforced plastering to enhance durability and insulation.</li>
+            <li><strong>Project Management & Consulting:</strong> Expert oversight ensuring seamless execution from inception to completion.</li>
+            <li><strong>Social Housing Development:</strong> Affordable and efficient housing solutions aligned with urban planning initiatives.</li>
+            <li><strong>Construction Monitoring:</strong> Ensuring quality control, compliance, and structural integrity across all projects.</li>
+        </ul>
+    </div>
+    
+    <div class="sector">
+        <h2>Innovative Construction Methods</h2>
+        <p>Domerius Services employs state-of-the-art building techniques that redefine efficiency, cost-effectiveness, and durability. Our approach includes:</p>
+        <ul>
+            <li><strong>Raft Foundation:</strong> A lightweight yet robust polystyrene-based foundation that enhances structural strength.</li>
+            <li><strong>Structural Plastering:</strong> Reinforced with high-strength plaster from Ikhaya Future House, ensuring resilience and longevity.</li>
+            <li><strong>Alternative Building Slabs:</strong> Advanced polystyrene slabs from TASS Systems and Ikhaya Future House for superior insulation and reduced energy consumption.</li>
+        </ul>
+        <p>By integrating these innovative materials, we deliver homes that are 5-20% more energy-efficient, significantly reducing heating and cooling costs. Our construction method eliminates the need for excessive labor, empowering a diverse workforce, including women in construction.</p>
+    </div>
+    
+    <div class="sector">
+        <h2>Projects and Experience</h2>
+        <p>Since 2016, Domerius Services has been a key player in South Africa’s construction sector. We have successfully delivered numerous residential, commercial, and social housing projects by collaborating with municipalities, housing authorities, and private stakeholders. Our ability to complete projects in nearly half the conventional time ensures faster occupancy and greater affordability for homeowners.</p>
+    </div>
+    
     <div class="sector">
         <h2>Architectural Designs</h2>
         <div class="image-gallery">
@@ -511,20 +758,33 @@
             <img src="images/view2.webp" alt="Project 2">
             <img src="images/view3.webp" alt="Project 3">
             <img src="images/view4.webp" alt="Project 4">
-       
         </div>
         <button class="slide-button" style="margin:3vh;"><a href="designs.html" style="text-decoration: none; color: #b56e03;">View Designs...</a></button>
-      
     </div>
-
+    
     <div class="sector">
         <h2>Why Choose Domerius Services?</h2>
-        <p>Clients choose Domerius Services because of our commitment to delivering high-quality architectural and construction solutions that exceed expectations. Our expertise, reliability, and attention to detail set us apart in the industry.</p>
-        <p>With a focus on professionalism, sustainability, and client satisfaction, Domerius Services continues to be a trusted name in architectural design and construction in South Africa.</p>
+        <p>Domerius Services is transforming construction by offering an innovative, cost-effective, and sustainable alternative to traditional methods. Our expertise in Alternative Building Methods ensures:</p>
+        <ul>
+            <li><strong>Faster Project Completion:</strong> Traditional construction takes 7-12 months; we deliver in just 3-4 months.</li>
+            <li><strong>Cost Savings:</strong> Clients save between 5-20% compared to standard building expenses.</li>
+            <li><strong>Energy Efficiency:</strong> Our structures naturally regulate indoor temperatures, reducing reliance on heating and cooling systems.</li>
+            <li><strong>Reduced Labor Requirements:</strong> Streamlined processes require fewer workers, lowering labor costs and increasing efficiency.</li>
+            <li><strong>Stronger and More Durable Structures:</strong> Our monolithic wall construction method ensures twice the strength of traditional brick homes.</li>
+        </ul>
+        <p>Domerius Services is fully accredited and complies with industry regulations, holding registrations with:</p>
+        <ul>
+            <li><strong>SACAP:</strong> South African Council for the Architectural Profession</li>
+            <li><strong>CIDB:</strong> Construction Industry Development Board</li>
+            <li><strong>NHBRC:</strong> National Home Builders Registration Council</li>
+        </ul>
+        <p>Our commitment to sustainability, efficiency, and affordability positions us as a leader in modern construction, setting new benchmarks for the industry in South Africa.</p>
     </div>
+    
+    
+
+
 </div>
-
-
 
     
 

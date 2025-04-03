@@ -710,10 +710,166 @@
     });
 </script>
 
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+.dome-vid {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.cont {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  background: white;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.text-section, .video-section {
+  flex: 1;
+  padding: 40px;
+}
+.text-section {
+  background: white;
+  color: #513102;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.text-section h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #b56e03;
+}
+.text-section p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.icon-list {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+.icon-list div {
+  background: #b56e03;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  font-size: 18px;
+  color: white;
+}
+.video-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  #95651c60;
+  backdrop-filter: blur(10px);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.play-button {
+  width: 70px;
+  height: 70px;
+  background: #f19914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.play-button::before {
+  content: "\25B6";
+  font-size: 30px;
+  color: white;
+}
+.play-button.pulse {
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.6;
+  }
+  100% {
+      transform: scale(1.2);
+      opacity: 0;
+  }
+}
+@media (max-width: 768px) {
+  .cont {
+      flex-direction: column;
+  }
+  .text-section, .video-section {
+      padding: 20px;
+  }
+}
+</style>
+
+<div class="dome-vid">
+<div class="cont">
+  <div class="text-section">
+    <h2>Explore the Vision Behind Domerius Services</h2>
+    <p>Our commitment to creating exceptional spaces is captured in this video. Watch as we blend creativity, precision, and cutting-edge technology to bring ideas to life.</p>
+    <p>From initial concept to final execution, Domerius Services transforms visions into remarkable structures, ensuring each project is a testament to quality and innovation.</p>
+    <div class="icon-list">
+        <div>&#9733; Creative Innovation</div>
+        <div>&#9881; Advanced Technology</div>
+        <div>&#128077; Quality Craftsmanship</div>
+    </div>
+  </div>
+  <div class="video-section">
+      <div class="video-wrapper">
+          <div class="video-overlay" id="video-overlay">
+              <div class="play-button pulse" id="play-btn"></div>
+          </div>
+          <iframe id="promo-video" src="https://player.vimeo.com/video/1071974231?h=90788bd7fb&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="width:100%; height:200px; border-radius: 8px;" title="Domerius Services -About 2"></iframe>
+      </div>
+  </div>
+</div>
+</div>
 
 
-
-
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+document.getElementById('play-btn').addEventListener('click', function() {
+  let overlay = document.getElementById('video-overlay');
+  let iframe = document.getElementById('promo-video');
+  let player = new Vimeo.Player(iframe);
+  player.play();
+  overlay.style.display = 'none';
+});
+</script>
 
 <div class="lining">
   <div class="marquee-container">
