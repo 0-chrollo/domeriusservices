@@ -23,12 +23,6 @@ window.onscroll= function() {
 
 
 
-
-
-
-
-
-
 // Banner Slider Functionality
 const slides = document.querySelectorAll('.banner-slide');
 const indicators = document.querySelectorAll('.indicator');
