@@ -170,24 +170,34 @@
 
 
 
+
+
+
+
 <style>
     :root {
-      --primary-red:  #c87c09;
+      --primary-red: #b56e03;
       --light-bg: #ffffff;
-      --dark-text:  #b2700c;
-
+      --dark-text: #d68b19;
+      --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       --spacing: 0.8rem;
     }
-
- 
-
-    .projects-in-progress{
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .projects-in-progress {
       background-color: var(--light-bg);
       color: var(--dark-text);
+      line-height: 1.6;
       padding: 0.5rem;
     }
-
-    .cardey {
+    
+    .card {
       background-color: white;
       border-radius: 2px;
       box-shadow: var(--card-shadow);
@@ -196,204 +206,304 @@
       margin: 1rem auto;
       border: 1px solid #e0e0e0;
     }
-
+    
     .headery {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .company-imagery {
+    width: 25%;
+    height: 95px;
+    object-fit:fill;
+    border-radius: 2px;
+  }
+
+  .company-namer {
       display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 
-    .company-imagery {
-      width: 25%;
-      height: 70px;
-      object-fit:fill;
-      border-radius: 2px;
-    }
-
-    .company-namer {
-        display: flex;
-      font-size: 1.8rem;
-      font-weight: 600;
-    }
-
+    
     .divider {
       height: 4px;
       background-color: var(--primary-red);
       margin: 0.5rem 0 var(--spacing) 0;
     }
-
+    
     .video-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 0.8rem;
     }
-
-    @media (min-width: 768px) {
-      .video-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .video-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-
+    
     .video-card {
       position: relative;
       overflow: hidden;
-      border-radius: 4px;
+      border-radius: 2px;
       box-shadow: var(--card-shadow);
-      background-color: #000;
+      transition: transform 0.3s ease;
+      border: 1px solid #e0e0e0;
     }
-
+    
+    .video-card:hover {
+      transform: translateY(-3px);
+    }
+    
     .video-container {
+      width: 100%;
+      aspect-ratio: 16/9;
       position: relative;
-      padding-top: 56.25%;
-      height: 0;
+      overflow: hidden;
     }
-
-    .video-container iframe {
+    
+    .video-background {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      border: none;
+      pointer-events: none;
+      filter: blur(5px);
+      transform: scale(1.1);
+      opacity: 0.8;
     }
-
-    .overlaying {
+    
+    .video-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      backdrop-filter: blur(3px);
       background-color: rgba(0, 0, 0, 0.2);
       z-index: 2;
     }
-
+    
+    .video-iframe {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      z-index: 10;
+    }
+    
+    .video-divider {
+      height: 3px;
+      background-color: var(--primary-red);
+    }
+    
     .play-button {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      z-index: 3;
-      width: 60px;
-      height: 60px;
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color:#b56e03;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      z-index: 5;
       animation: pulse 2s infinite;
     }
-
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 #b56e03;
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(230, 57, 70, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(230, 57, 70, 0);
+      }
+    }
+    
     .play-icon {
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 12px 0 12px 20px;
+      border-width: 10px 0 10px 16px;
       border-color: transparent transparent transparent white;
       margin-left: 3px;
     }
-
-    @keyframes pulse {
-      0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
+    
+    @media (min-width: 768px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
       }
-      50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 0.75;
+    }
+    
+    @media (min-width: 1024px) {
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
       }
-      100% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
+      
+      .card {
+        padding: calc(var(--spacing) * 1.2);
+      }
+      
+      .header {
+        margin-bottom: 1rem;
       }
     }
   </style>
 
-
-
-<main class="projects-in-progress">
-
-    <div class="cardey">
-        <div class="headery">
-          <img src="images/D2Geop.webp" alt="Company Logo" class="company-imagery">
-          <img src="images/D1ikhaya.webp" alt="Company Logo" class="company-imagery">
-          <img src="images/D3Tass.webp" alt="Company Logo" class="company-imagery">
-        </div>
-        <h1 class="company-namer">Alternative Building Technology Suppliers</h1>
-        <div class="divider"></div>
+<div class="projects-in-progress">
     
-        <div class="video-grid">
-          <!-- Video 1 -->
-          <div class="video-card">
-            <div class="video-container">
-              <iframe src="https://player.vimeo.com/video/1073124641?h=ada2cb6907&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="DS Project 00"></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-    
-          <!-- Video 2 -->
-          <div class="video-card">
-            <div class="video-container">
-              <iframe src="https://player.vimeo.com/video/1073059583?h=371e5fb7c9&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Domerius Project 03"></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-    
-          <!-- Video 3 -->
-          <div class="video-card">
-            <div class="video-container">
-              <iframe src="https://player.vimeo.com/video/1073059005?h=a7b5494b2d&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-    
-          <!-- Video 4 -->
-          <div class="video-card">
-            <div class="video-container" style="padding-top: 222.51%;">
-              <iframe src="https://player.vimeo.com/video/1073058414?h=734f366b4d&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-    
-          <!-- Video 5 -->
-          <div class="video-card">
-            <div class="video-container" style="padding-top: 177.82%;">
-              <iframe src="https://player.vimeo.com/video/1073059619?h=0eed338a78&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Build"></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-    
-          <!-- Video 6 -->
-          <div class="video-card">
-            <div class="video-container" style="padding-top: 177.82%;">
-              <iframe src="https://player.vimeo.com/video/1073124581?h=aaa2a644c8&badge=0&autopause=0&player_id=0&app_id=58479"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Build 2"></iframe>
-            </div>
-            <div class="overlaying"></div>
-            <div class="play-button"><div class="play-icon"></div></div>
-          </div>
-        </div>
+  <div class="card">
+    <div class="headery">
+        <img src="images/D2Geop.webp" alt="Company Logo" class="company-imagery">
+        <img src="images/D1ikhaya.webp" alt="Company Logo" class="company-imagery">
+        <img src="images/D3Tass.webp" alt="Company Logo" class="company-imagery">
       </div>
+      <h1 class="company-namer">Alternative Building Technology Suppliers</h1>
+      <div class="divider"></div>
     
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073124641?h=ada2cb6907&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073124641?h=ada2cb6907&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 2 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073059583?h=371e5fb7c9&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073059583?h=371e5fb7c9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 3 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073059005?h=a7b5494b2d&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073059005?h=a7b5494b2d&badge=0&autopause=0&player_id=0&app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 4 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073058414?h=734f366b4d&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073058414?h=734f366b4d&badge=0&autopause=0&player_id=0&app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 5 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073059619?h=0eed338a78&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073059619?h=0eed338a78&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 6 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073124581?h=aaa2a644c8&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073124581?h=aaa2a644c8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 7 - Repeated video 1 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073124641?h=ada2cb6907&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073124641?h=ada2cb6907&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+      
+      <!-- Video 8 - Repeated video 2 -->
+      <div class="video-card">
+        <div class="video-container">
+          <iframe class="video-background" src="https://player.vimeo.com/video/1073059583?h=371e5fb7c9&background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay" title="Background Video"></iframe>
+          <div class="video-overlay"></div>
+          <div class="play-button" onclick="playVideo(this, 'https://player.vimeo.com/video/1073059583?h=371e5fb7c9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479')">
+            <div class="play-icon"></div>
+          </div>
+          <iframe class="video-iframe" src="" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+        </div>
+        <div class="video-divider"></div>
+      </div>
+    </div>
+  </div>
 
 
-</main>
+  </div>
+
+  <script>
+    function playVideo(button, videoSrc) {
+      const container = button.parentElement;
+      const background = container.querySelector('.video-background');
+      const overlay = container.querySelector('.video-overlay');
+      const iframe = container.querySelector('.video-iframe');
+      
+      // Hide background, overlay and play button
+      background.style.display = 'none';
+      overlay.style.display = 'none';
+      button.style.display = 'none';
+      
+      // Set iframe source and show it
+      iframe.src = videoSrc;
+      iframe.style.display = 'block';
+    }
+    
+    // Load Vimeo Player API
+    const script = document.createElement('script');
+    script.src = 'https://player.vimeo.com/api/player.js';
+    document.body.appendChild(script);
+  </script>
+
 
 
 
