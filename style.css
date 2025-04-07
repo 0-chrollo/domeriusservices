@@ -292,7 +292,7 @@ background-color:  #b56e03;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: brightness(0.7);
+        filter: brightness(0.9);
       }
   
       .slide-content {
