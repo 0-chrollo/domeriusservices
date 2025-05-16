@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.domeriusarchdecon.co.za/sitemap.xml
