@@ -1,23 +1,21 @@
 <!DOCTYPE html>
   <html lang="en">
   <head>
-      <!--[SEO optiomization section]-->
+      <!--[SEO optimization section]-->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <title>About Domerius Services | Leading Architecture & Construction in Johannesburg</title>
+      <title>About Domerius Services | Leading Architecture & Construction Company in Johannesburg</title>
       <link rel="stylesheet" href="style.css">
       <script defer src="about.js"></script> 
-
+      
       <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
 
-
-
-
+      
       <!--[SEO optimization section]-->
       <meta name="description" content="Established in 2016, Domerius Services pioneers sustainable construction and affordable architecture in Johannesburg using Alternative Building Technology. Learn about our innovative approach to design and construction.">
       <meta name="keywords" content="Domerius Services Johannesburg, alternative building technology South Africa, affordable architecture Johannesburg, sustainable construction, green architecture South Africa, construction company Gauteng">
@@ -88,7 +86,7 @@
         "founders": [
           {
             "@type": "Person",
-            "name": "Henry Sechele"
+            "name": "Founder Name"
           }
         ],
         "location": {
@@ -113,19 +111,14 @@
             "contactOption": "WhatsApp"
           }
         ],
-        "email": "secheleh@gmail.com"   
+        "email": "secheleh@gmail.com",
       }
       </script>
-      
-   <!--[SEO optimization section]-->
+       <!--[SEO optimization section]-->
         <!--[SEO optimization section]-->
-        <!--[SEO optimization section]-->
-        <!--[SEO optimization section]-->
-        <!--[SEO optimization section]-->
-        <!--[SEO optimization section]-->
+         <!--[SEO optimization section]-->
 
-
-
+         
   </head>
   <body>
     <style>
@@ -633,7 +626,323 @@
 
 
 
-   
+  <section class="hero">
+    <div class="hero-content">
+        <h1>  
+            <img src="1000023750-removebg-preview.png" alt="Domerius Services" style="filter: none; height:10vh; padding-top:6vh;">
+            Transforming Spaces Since 2016
+        </h1>
+        <p>Delivering quality construction, sustainable housing, and architectural excellence across South Africa.</p>
+    </div>
+</section>
+
+
+<section class="section" id="about">
+    <div class="about-content">
+        <img src="architecture2.webp" alt="Domerius Services Team" class="about-image">
+        <div class="about-text">
+            <h2 style="color:#8b5e3b;">Who We Are</h2>
+            <p>Founded in 2016, Domerius Services is a trusted name in South Africa’s construction and social housing sector. From architectural design to large-scale housing developments, we are committed to building sustainable, high-quality structures that transform communities. With a focus on innovation, compliance, and excellence, we bring visionary projects to life.</p>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .img-showcase-wrapper {
+        width: 100%;
+        max-width: 500px; /* Reduced max-width for better desktop size */
+        margin: 0 auto;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .img-showcase-panel {
+        background-color: white;
+        border-radius: 2px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+    }
+    
+    .img-showcase-inner {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img-showcase-target {
+        width: 80%;
+        max-width: 500px; /* Control image size within the card */
+        height: auto;
+        object-fit: contain;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+    
+    .img-showcase-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .img-showcase-overlay.is-visible {
+        opacity: 1;
+    }
+    
+    .img-showcase-overlay img {
+        max-width: 60%;
+        max-height: 40%;
+        object-fit: contain;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Media queries for responsive design */
+    @media screen and (max-width: 768px) {
+        .img-showcase-panel {
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="img-showcase-wrapper">
+    <div class="img-showcase-panel">
+        <div class="img-showcase-inner">
+            <img src="IMG-20250324-WA0010(2).jpg" alt="Image in Card" class="img-showcase-target">
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.img-showcase-target').addEventListener('click', function() {
+        // Create overlay element
+        const imgOverlay = document.createElement('div');
+        imgOverlay.classList.add('img-showcase-overlay');
+        
+        // Create image element
+        const imgElement = document.createElement('img');
+        imgElement.src = this.src;
+        
+        // Add close functionality
+        imgOverlay.addEventListener('click', function() {
+            this.classList.remove('is-visible');
+            setTimeout(() => {
+                this.remove();
+            }, 200);
+        });
+        
+        // Append elements
+        imgOverlay.appendChild(imgElement);
+        document.body.appendChild(imgOverlay);
+        
+        // Trigger animation
+        setTimeout(() => {
+            imgOverlay.classList.add('is-visible');
+        }, 10);
+    });
+</script>
+<section class="section">
+    <div class="grid-container">
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-home"></i></div>
+            <h3>Residential Architecture</h3>
+            <p>We design and build energy-efficient, modern homes using alternative building technologies. Our approach ensures structural durability, faster construction times, and long-term cost savings, creating timeless living spaces with unparalleled comfort.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-building"></i></div>
+            <h3>Commercial Architecture</h3>
+            <p>From **office buildings to retail spaces, our commercial designs focus on aesthetic appeal, functionality, and sustainability. With our Ikhaya Future House System, we construct high-quality business spaces with reduced turnaround times and superior strength.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-paint-brush"></i></div>
+            <h3>Interior Architecture</h3>
+            <p>Our custom interior solutions blend modern design with practical layouts, ensuring every space is both visually appealing and highly functional. We incorporate smart design techniques for a seamless and luxurious experience.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-leaf"></i></div>
+            <h3>Sustainable Architecture</h3>
+            <p>We prioritize eco-conscious building techniques, utilizing energy-efficient materials and green construction methods. Our homes and commercial buildings reduce energy consumption while promoting environmental responsibility.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-landmark"></i></div>
+            <h3>Historic Preservation</h3>
+            <p>Preserving history through expert restoration and structural enhancements. We seamlessly blend heritage conservation with modern reinforcement techniques, ensuring long-lasting integrity without compromising historical value.</p>
+        </div>
+
+        <div class="card">
+            <div class="icon-box"><i class="fas fa-seedling"></i></div>
+            <h3>Green Architecture</h3>
+            <p>Leading the way in sustainable urban development, we integrate alternative building technology to create affordable, energy-efficient housing and smart infrastructure that enhances communities and future-proofs cities.</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+
+        /* Header Section */
+        .header {
+            background: linear-gradient(45deg, #002147, #005792);
+            color: white;
+            text-align: center;
+            padding: 20px 20px;
+            font-size: 1.7em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        /* Main About Section */
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+ 
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+        padding: 0px;
+    }
+
+    h1, h2 {
+        color: #8b5e3b;
+    }
+
+    .sector {
+        color: rgba(67, 41, 3, 0.725);
+        margin-bottom: 20px;
+        padding: 30px;
+        background: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .sector h2 {
+        color: #be7304ea;;
+        margin-bottom: 10px;
+    }
+
+    .sector p {
+        line-height: 1.6;
+        text-align: left;
+        color: rgba(67, 41, 3, 0.725);
+    }
+
+    .services ul li{
+        list-style-type: disc;
+        padding-left: 20px;
+        color:rgba(67, 41, 3, 0.725);
+    }
+
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 2px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+        }
+    }
+</style>
+
+
+<div class="container">
+
+
+    <div class="sector">
+        <h2>Company Overview</h2>
+        <p>Domerius Services is revolutionizing the construction industry through Alternative Building Technology (ABT) and Green Building Technology. Established in 2016 and based in Gauteng, South Africa, we specialize in high-quality residential and commercial designs, sustainable construction, and advanced project management. By integrating cutting-edge solutions such as polystyrene-based construction and structural plastering from Ikhaya Future House, we create energy-efficient buildings that are durable, cost-effective, and environmentally friendly.</p>
+        <p>Unlike conventional methods, our approach accelerates the construction process, cutting standard build times from 7 months to just 3-5 months while maintaining superior quality and compliance with industry standards.</p>
+    </div>
+    
+    <div class="sector services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of architectural and construction services designed for modern, sustainable living and business needs:</p>
+        <ul>
+            <li><strong>Residential Architecture:</strong> Bespoke home designs, renovations, and eco-friendly housing solutions.</li>
+            <li><strong>Commercial Architecture:</strong> Strategic planning and development of corporate offices, retail centers, and industrial spaces.</li>
+            <li><strong>Interior & Exterior Design:</strong> Functional and aesthetic solutions that optimize living and working spaces.</li>
+            <li><strong>Sustainable Architecture:</strong> Energy-efficient building designs that minimize environmental impact.</li>
+            <li><strong>Historic Preservation:</strong> Restoration and reinforcement of heritage structures with modern materials.</li>
+            <li><strong>Alternative Building Technology:</strong> Use of polystyrene-based walls and reinforced plastering to enhance durability and insulation.</li>
+            <li><strong>Project Management & Consulting:</strong> Expert oversight ensuring seamless execution from inception to completion.</li>
+            <li><strong>Social Housing Development:</strong> Affordable and efficient housing solutions aligned with urban planning initiatives.</li>
+            <li><strong>Construction Monitoring:</strong> Ensuring quality control, compliance, and structural integrity across all projects.</li>
+        </ul>
+    </div>
+    
+    <div class="sector">
+        <h2>Innovative Construction Methods</h2>
+        <p>Domerius Services employs state-of-the-art building techniques that redefine efficiency, cost-effectiveness, and durability. Our approach includes:</p>
+        <ul>
+            <li><strong>Raft Foundation:</strong> Monolothical wall panel construction method fused with a breathing Geoplast foundation blocks ensuring twice the strength of conventional construction. </li>
+            <li><strong>Structural Plastering:</strong> Reinforced with High strength galvanized Mesh, with a high 14Mpa plaster mix, ensuring resilience and longevity.</li>
+            <li><strong>Alternative Building Slabs:</strong> Advanced polystyrene slabs from TASS Systems and Ikhaya Future House for superior insulation and reduced energy consumption.</li>
+        </ul>
+        <p>By integrating these innovative materials, we deliver homes that are 5-20% more energy-efficient, significantly reducing heating and cooling costs. Our construction method eliminates the need for excessive labor, empowering a diverse workforce, including women in construction.</p>
+    </div>
+    
+    <div class="sector">
+        <h2>Projects and Experience</h2>
+        <p>Since 2016, Domerius Services has been a key player in South Africa’s construction sector. We have successfully delivered numerous residential, commercial, and social housing projects by collaborating with municipalities, housing authorities, and private stakeholders. Our ability to complete projects in nearly half the conventional time ensures faster occupancy and greater affordability for homeowners.</p>
+    </div>
+    
     <div class="sector">
         <h2>Architectural Designs</h2>
         <div class="image-gallery">
